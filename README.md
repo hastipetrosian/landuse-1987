@@ -1,14 +1,3 @@
----
-title: "README"
-date: "28 January 2020"
-output: html_document
----
+# land use analysis
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-* this is 
-* a bulleted list
-
-**boldface**  and *italic* and `code format`
+this is a project that hopes to estimate drivers of changes in land covered by dunes
