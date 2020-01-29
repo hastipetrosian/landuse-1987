@@ -7,3 +7,5 @@ library(sf)
 dd <- read_sf("Landeuse1987.shp")
 plot(dd)  ## basic plot
 
+
+## help(package="sf")
