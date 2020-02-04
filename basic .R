@@ -9,3 +9,13 @@ plot(dd)  ## basic plot
 
 
 ## help(package="sf")
+
+library(readxl)
+library(tidyverse)
+make_number <- function(x) {
+  as.numeric(stringr::str_replace(x,"/","."))
+}
+(read_excel("tmp.xlsx")
+    ## convert Farsi numbers to Western ...
+    %>% mutate_at("some data",make_number)
+)
