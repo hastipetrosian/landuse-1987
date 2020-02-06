@@ -12,10 +12,14 @@ plot(dd)  ## basic plot
 
 library(readxl)
 library(tidyverse)
+contains_slash <- function(x) {
+  any(grepl("/",x))
+}
 make_number <- function(x) {
   as.numeric(stringr::str_replace(x,"/","."))
 }
-(read_excel("tmp.xlsx")
-    ## convert Farsi numbers to Western ...
-    %>% mutate_at("some data",make_number)
+dd <- (
+  read_excel("tmp.xlsx")
+  ## convert Farsi numbers to Western ...
+  %>% mutate_if(contains_slash, make_number)
 )
